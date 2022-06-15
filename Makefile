@@ -1,6 +1,9 @@
 .PHONY: init dev test clean
 
-all:
+all: setup init
+
+setup:
+	python3 -m venv .venv
 
 init:
 	pip install -r requirements.txt
